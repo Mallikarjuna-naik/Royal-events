@@ -1,0 +1,43 @@
+/* image scroll css */
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: auto; */
+    grid-gap:25px;
+    padding: 20px;
+    flex: none;
+}
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100%);
+    transform: transform 0.5s;
+
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30% auto;
+    margin-top: 10px;
+}
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
