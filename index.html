@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="other.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="royalevents.css">
 
     <!-- img slier codeimport -->
     <link rel="stylesheet" href="imgslider.css">
@@ -39,19 +40,25 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
+        <!-- <div style="text-decoration-color: brown;">Royal-Events</div> -->
     </nav>
-
-    <div class="pZxRx b0t70b">
+    <!-- <div>Royal Events Guntur</div> -->
+    <div class="menuheader-res">
+        <h1>Royal-Events</h1>
+        <h3>We are the best birth day party organisiers</h3>
+    </div>
+    <div class="pZxRx alldiv">
         <div class="BLytye hero__title">
             <h1 class="hero__title hY9UDb ">
-                <span class="hero__title-content CoIOBe nbOMh" style="color: blue;" itemprop="name"
+                <!-- <span class="hero__title-content testoname1 nbOMh" style="color: blue;" itemprop="name"
                     data-field="headline"> <h4>ROYAL EVENTS</h4> We are the best birth day party organisiers
-                </span>
+                </span> -->
                 <!-- //ROYAL ENTRYS & STALLS -->
             </h1>
             <div class="notification ">
                 <span class="notification-content" itemprop="description" data-field="announcement">Event Management
-                    Company in Sambasiva Pet</span>
+                    Company in Sambasiva Pet
+                </span>
             </div>
             <div class="hero__strapline teQaN " data-field="hours-header">
                 <div id="hours_content" class="current-hours-content TEPfHc-R86cEd-bN97Pc temporal PTUDTb">Open 24 hours
@@ -78,20 +85,21 @@
             </div>
         </div>
         <!-- First Image -->
-        <div class="BiTRX">
+        <div class="header-img">
             <picture>
                 <source media="(max-width: 480px)" srcset="./newPhotos/horizontalImages/titleImg1.jpeg">
                 <source media="(min-width: 481px) and (max-width: 768px)" srcset="./newPhotos/horizontalImages/titleImg1.jpeg">
-                <img class="n9wygc" alt="Header image for the site" src="./newPhotos/horizontalImages/titleImg1.jpeg"
+                <img class="header-img1" alt="Header image for the site" src="./newPhotos/horizontalImages/titleImg1.jpeg"
                     data-atf="false" data-iml="759.7999999523163">
             </picture>
         </div>
     </div>
 
     <!-- -----------------------------------------------  Updates -------------------------------------------------------- -->
-    <section class="El9K7d b0t70b" id="posts" jslog="64600; track:impression" data-panel="local-post-panel">
-        <hr class="WUdCTb" id="updates">
-        <h2 class="Igsabe">Updates</h2>
+    <section style="background-color: rgb(250, 135, 206);height: 549px">
+    <section class="El9K7d updates" id="posts" jslog="64600; track:impression" data-panel="local-post-panel">
+        <hr class="allhr" id="updates">
+        <h2 class="allh2">Updates</h2>
 
         <!-- Updates img-slider code -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
@@ -134,201 +142,7 @@
             </template>
         </div>
 
-        <script>
-
-            function buttons(e) {
-
-                let id = e.id;
-                let circlesBtn = document.querySelectorAll('.circle span');
-                let images = document.querySelectorAll('.images img');
-                if (id > 0) {
-                    app.$data.leftArrow = true;
-                }
-                else {
-                    app.$data.leftArrow = false;
-                }
-                if (id < circlesBtn.length - 1) {
-                    app.$data.rightArrow = true;
-                }
-                else {
-                    app.$data.rightArrow = false;
-                }
-                for (let i = 0; i < images.length; i++) {
-                    images[i].className = '';
-                    circlesBtn[i].className = '';
-                }
-                images[id].className = 'show';
-                e.className = 'btnShow';
-            }
-
-            app = new Vue({
-                mounted() {
-
-                    var images = document.querySelectorAll('.images img');
-                    let circlesBtn;
-                    for (let i = 0; i < images.length; i++) {
-                        // adding circle buttons
-                        if (i === 0) {
-                            document.querySelector('.circle').innerHTML += `<span id="${i}" class="btnShow"></span>`;
-                            images[i].className = 'show';
-                        }
-                        else {
-                            document.querySelector('.circle').innerHTML += `<span id="${i}"></span>`;
-                        }
-
-                        circlesBtn = document.querySelectorAll('.circle span');
-                        circlesBtn[i].setAttribute('onclick', 'buttons(this)');
-                        // adding id for each image
-                        images[i].setAttribute('id', i);
-                        // disable draggable of images
-                        images[i].setAttribute('draggable', 'false');
-                    }
-                    this.autoPlay();
-
-                },
-                el: '#app',
-                data: {
-                    leftArrow: false,
-                    rightArrow: true,
-                    mouseDowned: false,
-                    mouseDownx: 0,
-                    mouseUpped: false,
-                    mouseUpX: 0,
-                    mouseMoveX: 0,
-                    autoPlayed: true,
-
-                },
-                methods: {
-                    next: function () {
-                        let ele = document.querySelector('.show');
-                        let circlesBtn = document.querySelectorAll('.circle span');
-                        let allEles = document.querySelectorAll('.images img');
-                        let length = allEles.length;
-                        this.leftArrow = true;
-                        // if current image and circle button is in the last
-                        if (ele.nextElementSibling !== null) {
-                            if (ele.nextElementSibling.id == allEles[length - 1].id) {
-                                this.rightArrow = false;
-                            }
-                            circlesBtn[parseInt(ele.id) + 1].className = 'btnShow';
-                            circlesBtn[parseInt(ele.id)].className = '';
-                            ele.className = '';
-                            ele.nextElementSibling.className = 'show';
-                        }
-
-
-                    },
-                    previous: function () {
-                        let ele = document.querySelector('.show');
-                        let circlesBtn = document.querySelectorAll('.circle span');
-                        let allEles = document.querySelectorAll('.images img');
-                        let length = allEles.length;
-                        this.rightArrow = true;
-                        // if current image and circle button is in the first
-                        if (ele.previousElementSibling !== null) {
-                            if (ele.previousElementSibling.id == allEles[0].id) {
-                                this.leftArrow = false;
-                                circlesBtn[0].className = 'btnShow';
-                            }
-                            else {
-                                circlesBtn[parseInt(ele.id) - 1].className = 'btnShow';
-                            }
-                            circlesBtn[parseInt(ele.id)].className = '';
-                            ele.className = '';
-                            ele.previousElementSibling.className = 'show';
-                        }
-                    },
-
-                    ifTouched: function (event, touched) {
-                        // if mobile devices
-                        if (touched == 'touched') {
-                            let rect = event.target.getBoundingClientRect();
-                            let x = event.targetTouches[0].pageX - rect.left;
-                            return event.offsetX = x;
-                        }
-                        else {
-                            return event.offsetX;
-                        }
-                    },
-                    mouseDown: function (e, touched) {
-                        this.mouseDownx = this.ifTouched(e, touched);
-                        this.mouseDowned = true;
-                    },
-                    mouseMove: function (e, touched) {
-                        let image = document.querySelector('.show');
-                        image.style.left = 0;
-                        // mouse down should be fired before mouse move
-                        if (this.mouseDowned) {
-                            image.style.left = `${this.ifTouched(e, touched) - this.mouseDownx}px`;
-                        }
-                    },
-                    mouseUp: function (e) {
-                        let image = document.querySelector('.show');
-                        image.style.left = 0;
-                        this.mouseDowned = false;
-                        this.mouseUpX = e.offsetX;
-                        let sliderWidth = document.querySelector('.slider').clientWidth;
-                        // if image pulled/dragged from right to left
-                        if (this.mouseDownx > this.mouseUpX) {
-                            this.next();
-
-                        }
-                        // if image pulled/dragged from left to right
-                        else if (this.mouseDownx < this.mouseUpX) {
-                            this.previous();
-                        }
-                        // if not pulled/dragged, only clicked
-                        else {
-                            // if the click position is in the right side of the slider
-                            if (this.mouseDownx >= sliderWidth / 2) {
-                                this.next();
-                            }
-                            // if the click position is in the left side of the slider
-                            else {
-                                this.previous();
-                            }
-                        }
-                    },
-                    autoPlay: function () {
-                        this.autoPlayed = true;
-                        // for each 5sec
-                        let interval = setInterval(auto, 5000);
-                        let image = document.querySelector('.show');
-                        let allEles = document.querySelectorAll('.images img');
-                        let length = allEles.length;
-                        let circlesBtn = document.querySelectorAll('.circle span');
-                        function auto() {
-                            if (app.$data.autoPlayed) {
-                                let image = document.querySelector('.show');
-                                let circleShow = document.querySelector('.btnShow');
-                                // if current image in the last
-                                if (image.id == allEles[length - 1].id) {
-                                    image.className = '';
-                                    allEles[0].className = 'show';
-                                    circleShow.className = '';
-                                    circlesBtn[0].className = 'btnShow';
-                                    app.$data.leftArrow = false;
-                                    app.$data.rightArrow = true;
-
-                                }
-                                else {
-                                    app.next();
-                                    app.$data.leftArrow = true;
-                                }
-                            }
-                            else {
-                                clearInterval(interval);
-                            }
-                        }
-                    },
-                    pause: function () {
-                        this.autoPlayed = false;
-                    }
-                }
-            });
-        </script>
-
-
+        <script src="imgslider.js"></script>
 
         <!-- Updates img-slider code end here -->
 
@@ -342,96 +156,96 @@
             <img src="../images/next.png" alt="next" id="nextBtn">
         </div> -->
     </section>
-
+    </section>
     <!-- ----------------------------------------------- Testomonials ----------------------- -->
-
-    <div class="b0t70b" id="testimonials" data-panel="testimonials-panel" jslog="64389; track:impression;">
-        <hr class="WUdCTb">
-        <h2 class="Igsabe" id="Testimonials">Testimonials</h2>
-        <div class="EIjale">
-            <div class="iTushb">
-                <div class="zGTRLd">
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+    <section style="background-color: lightyellow;">
+    <div class="alldiv" id="testimonials" data-panel="testimonials-panel" jslog="64389; track:impression;">
+        <hr class="allhr">
+        <h2 class="allh2" id="Testimonials">Testimonials</h2>
+        <div class="testodiv">
+            <div class="testodiv1">
+                <div class="testodiv2">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="P0eG7b" id="ReviewMonths1">10th Jan 2023</div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testodatediv" id="ReviewMonths1">10th Jan 2023</div>
                     <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
                         jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
                         jsshadow="" aria-disabled="false" tabindex="0" aria-haspopup="true" aria-expanded="false"
@@ -465,98 +279,98 @@
                         </div>
                     </div>
                 </div>
-                <blockquote class="Sc4eWe">
+                <blockquote class="testomargin">
                     <!-- <q>The best event management team in the guntur with reasonable prices. They came to my village on May 30,2022 for my son first birthday outdoor decoration and the output was extraordinary. Received so many compliments from the near and dear. Highly recommend to others.</q> -->
                     <q>The best entrys in guntur & awesome work the event was very well managed the stalls &entrys we
                         are happy to hired them&would definitely recomended them everyone you will be the first team in
                         our minds for any other parties in future it was an awesome experience🤗 and we enjoyed a lot
                         thank u so much for ROYAL ENTRYS & STALLS you did a tremendous work</q>
                 </blockquote>
-                <cite class="YSOJuc CoIOBe" id="ReviewMonths1">- Naredla Bhargavi</cite>
+                <cite class="testoname testoname1" id="ReviewMonths1">- Naredla Bhargavi</cite>
             </div>
-            <div class="iTushb">
-                <div class="zGTRLd">
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+            <div class="testodiv1">
+                <div class="testodiv2">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="P0eG7b" id="ReviewMonths2">18th Jan 2023</div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testodatediv" id="ReviewMonths2">18th Jan 2023</div>
                     <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
                         jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
                         jsshadow="" aria-disabled="false" tabindex="0" aria-haspopup="true" aria-expanded="false"
@@ -569,99 +383,99 @@
                         </span>
                     </div>
                 </div>
-                <blockquote class="Sc4eWe">
+                <blockquote class="testomargin">
                     <!-- <q>The Best event management team .Met them  for my son's first birthday and they gave more than what we expected. They will customise decor according to your budget and space you have. Their Collection of props is just awesome....Output was really unexpected Thanks for the Best work @ Chaithanya events</q> -->
                     <q>Best entrys in guntur it was an awesome experience that ever has with my frnds especially we
                         enjoyed a lot😊😊great servicee thanku royal entrys and stalls for great service</q>
                 </blockquote>
-                <cite class="YSOJuc CoIOBe">- Shaik Nayeema</cite>
-                <a target="_blank" class="YSOJuc CoIOBe"
+                <cite class="testoname testoname1">- Shaik Nayeema</cite>
+                <a target="_blank" class="testoname testoname1"
                     href="https://www.google.com/maps/contrib/104783285002160192592/place/ChIJtzrUzPx1SjoRuOPsqYWplaE/@16.2973763,80.4413197,17z/data=!4m6!1m5!8m4!1e1!2s104783285002160192592!3m1!1e1?hl=en-US">View
                     Review</a>
             </div>
-            <div class="iTushb">
-                <div class="zGTRLd">
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+            <div class="testodiv1">
+                <div class="testodiv2">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="CoamRb">
-                        <div class="XZleqe sp">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="TpcqSc">
-                            <svg class="Pmm3mc" style="fill:currentColor" viewBox="0 0 24 24">
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                                 </path>
                             </svg>
                         </div>
                     </div>
-                    <div class="P0eG7b" id="ReviewMonths3">5th Jan 2023</div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testoCo">
+                        <div class="stars sp">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="testodiv3">
+                            <svg class="starpmmc" style="fill:currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testodatediv" id="ReviewMonths3">5th Jan 2023</div>
                     <div role="button" class="U26fgb JRtysb WzwrXb" jscontroller="iSvg6e"
                         jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventMouseEvents=true|preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;"
                         jsshadow="" aria-disabled="false" tabindex="0" aria-haspopup="true" aria-expanded="false"
@@ -695,12 +509,12 @@
                         </div>
                     </div>
                 </div>
-                <blockquote class="Sc4eWe">
+                <blockquote class="testomargin">
                     <q>Nice entrys and stalls in guntur it was great experience for your tremendous work thank for
                         giving such nice entrys n stalls thank u royal entrys &stalls</q>
                     <!-- <q>I found Raju events in Google search. I can say they are best. Everything they organised very well, also they are so cooperative and supportive. They have best output and given best memory to my daughter. Thank you to the entire team. The final thing i can say You can relax by choosing them.</q> -->
                 </blockquote>
-                <cite class="YSOJuc CoIOBe">- kovvada lakshmi lavanya</cite>
+                <cite class="testoname testoname1">- kovvada lakshmi lavanya</cite>
             </div>
         </div>
         <div class="aPrNKd">
@@ -709,14 +523,16 @@
             <a target="_blank" class="PDllHc dogP7c" jslog="66413; track:impression,click;"
                 href="https://goo.gl/maps/Rr231kLdWr9Gx8i9A" rel="noreferrer">Read More</a>
         </div>
+    </div>
+    </section>
+    <!-- <hr> -->
 
-        <hr>
-
-        <!-- -------------------------- Gallery Code Starts Here ------------------------------------------------------------->
-        <div class="b0t70b" id="Gallery" jslog="64602; track:impression" data-panel="gallery-panel">
-            <div class="y72IR">
-                <hr class="WUdCTb">
-                <h2 class="Igsabe">Gallery</h2>
+    <!-- -------------------------- Gallery Code Starts Here ------------------------------------------------------------->
+    <section style="background-color: lightcoral;">
+        <div class="alldiv" id="Gallery" jslog="64602; track:impression" data-panel="gallery-panel">
+            <div class="gallerydiv1">
+                <hr class="allhr">
+                <h2 class="allh2">Gallery</h2>
             </div>
 
             <!-- Image slider Gallery code starts here -->
@@ -754,200 +570,6 @@
                     </div>
                 </template>
             </div>
-
-            <script>
-
-                function buttons1(e) {
-
-                    let id = e.id;
-                    let circlesBtn = document.querySelectorAll('.circle1 span');
-                    let images = document.querySelectorAll('.images1 img');
-                    if (id > 0) {
-                        app.$data.leftArrow1 = true;
-                    }
-                    else {
-                        app.$data.leftArrow1 = false;
-                    }
-                    if (id < circlesBtn.length - 1) {
-                        app.$data.rightArrow1 = true;
-                    }
-                    else {
-                        app.$data.rightArrow1 = false;
-                    }
-                    for (let i = 0; i < images.length; i++) {
-                        images[i].className = '';
-                        circlesBtn[i].className = '';
-                    }
-                    images[id].className = 'show';
-                    e.className = 'btnShow';
-                }
-
-                app1 = new Vue({
-                    mounted() {
-
-                        var images = document.querySelectorAll('.images1 img');
-                        let circlesBtn;
-                        for (let i = 0; i < images.length; i++) {
-                            // adding circle buttons
-                            if (i === 0) {
-                                document.querySelector('.circle1').innerHTML += `<span id="${i}" class="btnShow"></span>`;
-                                images[i].className = 'show';
-                            }
-                            else {
-                                document.querySelector('.circle1').innerHTML += `<span id="${i}"></span>`;
-                            }
-
-                            circlesBtn = document.querySelectorAll('.circle1 span');
-                            circlesBtn[i].setAttribute('onclick', 'buttons1(this)');
-                            // adding id for each image
-                            images[i].setAttribute('id', i);
-                            // disable draggable of images
-                            images[i].setAttribute('draggable', 'false');
-                        }
-                        this.autoPlay1();
-
-                    },
-                    el: '#app1',
-                    data1: {
-                        leftArrow1: false,
-                        rightArrow1: true,
-                        mouseDowned1: false,
-                        mouseDownx1: 0,
-                        mouseUpped1: false,
-                        mouseUpX1: 0,
-                        mouseMoveX1: 0,
-                        autoPlayed1: true,
-
-                    },
-                    methods: {
-                        next1: function () {
-                            let ele = document.querySelector('.show');
-                            let circlesBtn = document.querySelectorAll('.circle1 span');
-                            let allEles = document.querySelectorAll('.images1 img');
-                            let length = allEles.length;
-                            this.leftArrow1 = true;
-                            // if current image and circle button is in the last
-                            if (ele.nextElementSibling !== null) {
-                                if (ele.nextElementSibling.id == allEles[length - 1].id) {
-                                    this.rightArrow1 = false;
-                                }
-                                circlesBtn[parseInt(ele.id) + 1].className = 'btnShow';
-                                circlesBtn[parseInt(ele.id)].className = '';
-                                ele.className = '';
-                                ele.nextElementSibling.className = 'show';
-                            }
-
-
-                        },
-                        previous1: function () {
-                            let ele = document.querySelector('.show');
-                            let circlesBtn = document.querySelectorAll('.circle1 span');
-                            let allEles = document.querySelectorAll('.images1 img');
-                            let length1 = allEles.length;
-                            this.rightArrow1 = true;
-                            // if current image and circle button is in the first
-                            if (ele.previousElementSibling !== null) {
-                                if (ele.previousElementSibling.id == allEles[0].id) {
-                                    this.leftArrow1 = false;
-                                    circlesBtn[0].className = 'btnShow';
-                                }
-                                else {
-                                    circlesBtn[parseInt(ele.id) - 1].className = 'btnShow';
-                                }
-                                circlesBtn[parseInt(ele.id)].className = '';
-                                ele.className = '';
-                                ele.previousElementSibling.className = 'show';
-                            }
-                        },
-
-                        ifTouched1: function (event, touched) {
-                            // if mobile devices
-                            if (touched == 'touched') {
-                                let rect = event.target.getBoundingClientRect();
-                                let x = event.targetTouches[0].pageX - rect.left;
-                                return event.offsetX = x;
-                            }
-                            else {
-                                return event.offsetX;
-                            }
-                        },
-                        mouseDown1: function (e, touched) {
-                            this.mouseDownx1 = this.ifTouched1(e, touched);
-                            this.mouseDowned1 = true;
-                        },
-                        mouseMove1: function (e, touched) {
-                            let image = document.querySelector('.show');
-                            image.style.left = 0;
-                            // mouse down should be fired before mouse move
-                            if (this.mouseDowned1) {
-                                image.style.left = `${this.ifTouched1(e, touched) - this.mouseDownx1}px`;
-                            }
-                        },
-                        mouseUp1: function (e) {
-                            let image = document.querySelector('.show');
-                            image.style.left = 0;
-                            this.mouseDowned1 = false;
-                            this.mouseUpX1 = e.offsetX;
-                            let sliderWidth1 = document.querySelector('.slider1').clientWidth;
-                            // if image pulled/dragged from right to left
-                            if (this.mouseDownx1 > this.mouseUpX1) {
-                                this.next1();
-
-                            }
-                            // if image pulled/dragged from left to right
-                            else if (this.mouseDownx1 < this.mouseUpX1) {
-                                this.previous1();
-                            }
-                            // if not pulled/dragged, only clicked
-                            else {
-                                // if the click position is in the right side of the slider
-                                if (this.mouseDownx1 >= sliderWidth / 2) {
-                                    this.next1();
-                                }
-                                // if the click position is in the left side of the slider
-                                else {
-                                    this.previous1();
-                                }
-                            }
-                        },
-                        autoPlay1: function () {
-                            this.autoPlayed1 = true;
-                            // for each 5sec
-                            let interval = setInterval(auto, 5000);
-                            let image = document.querySelector('.show');
-                            let allEles = document.querySelectorAll('.images1 img');
-                            let length = allEles.length;
-                            let circlesBtn = document.querySelectorAll('.circle1 span');
-                            function auto() {
-                                if (app1.$data1.autoPlayed1) {
-                                    let image = document.querySelector('.show');
-                                    let circleShow = document.querySelector('.btnShow');
-                                    // if current image in the last
-                                    if (image.id == allEles[length - 1].id) {
-                                        image.className = '';
-                                        allEles[0].className = 'show';
-                                        circleShow.className = '';
-                                        circlesBtn[0].className = 'btnShow';
-                                        app1.$data1.leftArrow1 = false;
-                                        app1.$data1.rightArrow1 = true;
-
-                                    }
-                                    else {
-                                        app1.next1();
-                                        app1.$data1.leftArrow1 = true;
-                                    }
-                                }
-                                else {
-                                    clearInterval(interval);
-                                }
-                            }
-                        },
-                        pause1: function () {
-                            this.autoPlayed1 = false;
-                        }
-                    }
-                });
-            </script>
         </div>
 
         <!-- ------------------------------------------- Updated GALLERY --------------------------------------------- -->
@@ -985,23 +607,30 @@
         });
     </script> -->
         <!-- ------------------------------------------------ updates Gallery code ends here ---------------------------- -->
-        <div>To see Latest Images Visite <a target="_blank"
+        <div>To see Latest Images Visite 
+            <a target="_blank"
                 href="https://www.google.com/maps/place/ROYAL+ENTRYS+%26+STALLS/@16.2973256,80.4438011,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMi5sP6R4Wp51fqDB6d0QskCwS9L_H527rKFGHJ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMi5sP6R4Wp51fqDB6d0QskCwS9L_H527rKFGHJ%3Dw203-h127-k-no!7i1280!8i803!4m9!3m8!1s0x3a4a75fcccd43ab7:0xa195a985a9ece3b8!8m2!3d16.2973763!4d80.4438946!10e5!14m1!1BCgIgARICGAI!16s%2Fg%2F11k3h35qnq">
-                Here </a></div>
+                Here 
+            </a>
+        </div>
+    </section>
+    
         <!-- -------------------------------------- Contact Us Code Starts Here -------------------------------- -->
+        <section style="background-color: aquamarine;">
 
-        <div id="details" data-panel="business-details-panel" class="IJMoHc b0t70b" jslog="59796; track:impression">
-            <hr class="WUdCTb">
-            <h2 class="Igsabe" id="locateUs">Locate Us</h2>
-            <div class="IQ1KEb" jslog="56034; track:impression,click">
+        <div id="details" data-panel="business-details-panel" class="IJMoHc alldiv" jslog="59796; track:impression">
+            <hr class="allhr">
+            <h2 class="allh2" id="locateUs">Locate Us</h2>
+            <div class="locatediv1" jslog="56034; track:impression,click">
                 <a href="https://www.google.com/maps/place/ROYAL+ENTRYS+%26+STALLS/@16.2973763,80.4351399,15z/data=!4m17!1m10!3m9!1s0x3a4a75fcccd43ab7:0xa195a985a9ece3b8!2sROYAL+ENTRYS+%26+STALLS!8m2!3d16.2973763!4d80.4438946!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11k3h35qnq!3m5!1s0x3a4a75fcccd43ab7:0xa195a985a9ece3b8!8m2!3d16.2973763!4d80.4438946!16s%2Fg%2F11k3h35qnq?entry=ttu"
                     target="_blank" itemprop="hasMap" data-tracking-element-type="7">
-                    <div class="QMbmRe"
+                    <div class="locatediv2"
                         style="background-image:url('https://maps.googleapis.com/maps/api/staticmap?scale=1&amp;size=1600x900&amp;style=feature:poi.business|visibility:off&amp;style=feature:water|visibility:simplified&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:road.highway|element:labels|saturation:-90|lightness:25&amp;format=jpg&amp;language=en&amp;region=IN&amp;markers=color:0x48487f|16.2972909,80.4439204&amp;zoom=16&amp;client=google-presto&amp;signature=NLdEFa_KJ_qNpSxT_1GmnnHp51w')"
                         title="Map showing business location.">
                     </div>
                 </a>
             </div>
+        </section>
             <div class="fGZQDc">
                 <div class="kCmrbf">
                     <h3 class="Gou21b">Contact</h3>
@@ -1108,7 +737,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 
     <script src="royalEvents.js"></script>
 

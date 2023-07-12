@@ -4,10 +4,32 @@
     justify-content: center;
     position: sticky;
     top: 0;
-    cursor: pointer;
-    color: blueviolet;
+    cursor: auto;
+    /* color: blueviolet; */
     /* height: 447px; */
     
+}
+.titlehead{
+    opacity: 0;
+    color: yellowgreen;
+}
+.menuheader{
+    /* color: aliceblue;
+    text-shadow: 2px 2px 5px rgb(235, 233, 241);
+    margin-bottom: 700px;
+    height: 20px;
+    text-align: center;
+    justify-content: center; */
+    /* opacity: 0; */
+}
+.menuheader-res{
+    text-shadow: 2px 2px 5px red;
+    /* margin-left: 35px; */
+    margin: auto;
+    /* margin-bottom: 250px; */
+    height: 10px;
+    text-align: center;
+    justify-content: center;
 }
 .nav-list{
     width: 100%;
@@ -19,7 +41,7 @@
 .burger{
     /* display: none; */
     position: absolute;
-    cursor: pointer;
+    cursor: auto;
     left: 5%;
     /* top: 9px; */
     top: 35px;
@@ -36,9 +58,6 @@ html{
 
 }
 
-.hero__title-content{
-    /* margin: 0 140px 16px; */
-}
 @media only screen and (max-width: 1140px){
     .nav-list{
         flex-direction: column;
@@ -47,6 +66,40 @@ html{
         text-shadow: 2px 2px red;
         margin-top: 300px;
         padding: 0px;
+    }
+    .menuheader-res{
+        /* color: aliceblue; */
+        text-shadow: 2px 2px 5px red;
+        /* margin-left: 35px; */
+        margin: auto;
+        /* margin-bottom: 250px; */
+        height: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .titlehead{
+        /* opacity: 0; */
+        color: aliceblue;
+        text-shadow: 2px 2px 5px rgb(59, 14, 193);
+        margin-bottom: 700px;
+        height: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    .background{
+        background:rgb(0, 0, 0.7);
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    .menuheader{
+        color: aliceblue;
+        text-shadow: 2px 2px 5px rgb(59, 14, 193);
+        /* margin-left: 35px; */
+        /* margin: auto; */
+        margin-bottom: 700px;
+        height: 20px;
+        text-align: center;
+        justify-content: center;
     }
     .nabar{
         flex-direction: column;
@@ -98,7 +151,7 @@ html{
 } */
 
 .background{
-    background:rgb(0, 0, 0.7);
+    /* background:rgb(0, 0, 0.7); */
     background-size: cover;
     background-blend-mode: darken;
 }

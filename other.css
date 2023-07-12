@@ -1405,16 +1405,16 @@ c-wiz.Ubi8Z {
     font-style: normal
 }
 
-.IQ1KEb {
+/* .IQ1KEb {
     margin-bottom: 48px
-}
+} */
 
-.QMbmRe {
+/* .QMbmRe {
     background-position: center center;
     background-repeat: no-repeat;
     padding-top: 56%;
     width: 100%
-}
+} */
 
 .x2TOCf {
     font-weight: 400;
@@ -1501,12 +1501,13 @@ c-wiz.Ubi8Z {
     width: 100%
 }
 
-.BiTRX {
+.header-img {
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 1080px;
     -webkit-box-ordinal-group: 1;
-    order: 1
+    order: 1;
+    background-color: green;
 }
 @media screen and (max-width: 1140px){
     .hY9UDb {
@@ -1523,7 +1524,7 @@ c-wiz.Ubi8Z {
     word-break: break-word;
 }
 
-.n9wygc {
+.header-img1 {
     display: block;
     height: auto;
     width: 100%
@@ -1839,11 +1840,11 @@ c-wiz.Ubi8Z {
     width: 70%
 }
 
-.y72IR {
+/* .y72IR {
     align-items: center;
     display: flex;
     flex-direction: column
-}
+} */
 
 .y72IR,.goIW2 {
     padding: 0 18px
@@ -2047,20 +2048,20 @@ c-wiz.Ubi8Z {
     }
 }
 
-.TpcqSc {
+/* .TpcqSc {
     color: rgb(218,220,224);
     z-index: -1;
     vertical-align: top;
     height: 20px
-}
+} */
 
-.XZleqe {
+/* .XZleqe {
     color: rgb(251,188,4);
     top: 0;
     left: 0;
     position: absolute;
     height: 20px
-}
+} */
 
 .plHSId {
     color: rgb(251,188,4);
@@ -2080,7 +2081,7 @@ c-wiz.Ubi8Z {
     position: absolute
 }
 
-.CoamRb {
+/* .CoamRb {
     width: 20px;
     height: 20px;
     vertical-align: text-bottom
@@ -2094,7 +2095,7 @@ c-wiz.Ubi8Z {
 .CoamRb {
     position: relative;
     display: inline-block
-}
+} */
 
 .FrGbIb,.Dx6vx {
     background: url(//www.gstatic.com/bfe/images/reviews/empty_state_v2.svg) no-repeat center;
@@ -2109,38 +2110,38 @@ c-wiz.Ubi8Z {
     justify-content: space-between
 }
 
-.zGTRLd {
+/* .zGTRLd {
     display: flex;
     flex-direction: row
-}
+} */
 
-.P0eG7b {
+/* .P0eG7b {
     color: gray;
     flex-grow: 2;
     margin-left: 12px
-}
+} */
 
-.iTushb {
+/* .iTushb {
     flex-basis: 100%;
     flex-direction: column;
     margin: 20px 10px 60px
-}
+} */
 
-.Sc4eWe {
+/* .Sc4eWe {
     margin: 0 0 15px
-}
+} */
 
 .dogP7c {
     margin: 0 15px
 }
 
-.YSOJuc {
+/* .YSOJuc {
     font-style: normal;
     font-weight: bold;
     color: #1967d2;
-}
+} */
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
     .iTushb {
         flex-basis:48%;
         margin: 0 0 60px
@@ -2152,7 +2153,7 @@ c-wiz.Ubi8Z {
         flex-basis:32%;
         max-width: 300px
     }
-}
+} */
 
 sentinel {
 }

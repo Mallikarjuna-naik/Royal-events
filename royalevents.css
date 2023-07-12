@@ -1,0 +1,125 @@
+/* updates css starts here */
+.updates {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    max-width: 1080px;
+    /* background-color: lightgreen; */
+    width: 100%
+}
+.allhr {
+    border: 1px solid black;
+    margin: 0 auto 16px;
+    width: 50px
+}
+.allh2 {
+    font-size: 1em;
+    margin: 0 0 48px;
+    text-align: center;
+    text-transform: uppercase
+}
+/* updates css ends here */
+
+/* Testomonials code starts here */
+.alldiv {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    max-width: 1080px;
+    width: 100%
+}
+.testodiv {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between
+}
+.testodiv1 {
+    flex-basis: 100%;
+    flex-direction: column;
+    margin: 20px 10px 60px
+}
+@media (min-width: 640px) {
+    .testodiv1 {
+        flex-basis:48%;
+        margin: 0 0 60px
+    }
+}
+
+@media (min-width: 992px) {
+    .testodiv1 {
+        flex-basis:32%;
+        max-width: 300px
+    }
+}
+.testodiv2 {
+    display: flex;
+    flex-direction: row
+}
+
+.testoCo {
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom
+}
+
+.testoCo .starpmmc {
+    width: 20px;
+    height: 20px
+}
+
+.testoCo {
+    position: relative;
+    display: inline-block
+}
+.stars {
+    color: rgb(251,188,4);
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 20px
+}
+.TpcqSc {
+    color: rgb(218,220,224);
+    z-index: -1;
+    vertical-align: top;
+    height: 20px
+}
+.testodatediv {
+    color: gray;
+    flex-grow: 2;
+    margin-left: 12px
+}
+.U26fgb.u3bW4e {
+    outline: 1px solid transparent
+}
+.testomargin {
+    margin: 0 0 15px
+}
+.testoname {
+    font-style: normal;
+    font-weight: bold;
+    color: #1967d2;
+}
+.testoname1 {
+    color: #48487f;
+    font-family: "Libre Baskerville",serif
+}
+
+ /* Galley css starts here */
+ .gallerydiv1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+ /* Gallery css ends here  */
+
+ /* Locate Us css sarts here */
+ .locatediv1 {
+    margin-bottom: 48px
+}
+.locatediv2 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 56%;
+    width: 100%
+}
