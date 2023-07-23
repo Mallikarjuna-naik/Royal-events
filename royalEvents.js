@@ -27,16 +27,16 @@ function buttons1(e) {
     let circlesBtn = document.querySelectorAll('.circle1 span');
     let images = document.querySelectorAll('.images1 img');
     if (id > 0) {
-        app.$data.leftArrow1 = true;
+        app1.$data.leftArrow1 = true;
     }
     else {
-        app.$data.leftArrow1 = false;
+        app1.$data.leftArrow1 = false;
     }
     if (id < circlesBtn.length - 1) {
-        app.$data.rightArrow1 = true;
+        app1.$data.rightArrow1 = true;
     }
     else {
-        app.$data.rightArrow1 = false;
+        app1.$data.rightArrow1 = false;
     }
     for (let i = 0; i < images.length; i++) {
         images[i].className = '';
